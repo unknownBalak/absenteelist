@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax-fetching file</title>
+
+
+
+     <script>
+
+    document.addEventListener('click',function(){
+
+        hr = new XMLHttpRequest();
+       
+     hr.onreadystatechange = function(){
+    
+        if(hr.readystate===4 && hr.status===200){
+            
+            var return_data= JSON.parse(hr.response);
+           //    var return_data= hr.responseText; 
+           //  console.log (return_data);
+           document.getElementById('div1').innerHTML=return_data.firstname;
+    
+        }
+     
+     }
+     url="jsonfile/ajax.json"
+     hr.open("GET",url,true);
+     hr.send();
+     
+    })
+    </script>
+</head>
+<body>
+     <h2>Hey We are using AJAX file here</h2>
+      <button >Click Here</button>
+     <div id="div1"></div>
+
+</html>
+</body>

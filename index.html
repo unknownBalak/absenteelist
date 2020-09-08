@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV file</title>
+    <script src="js/papaparse.min.js"></script>
+    <script src="js/ajax1.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/ajax.js"></script>
+
+</head>
+<body> 
+  
+  <span style="color:#0c2afd; font-weight: 900;">HINT: </span>
+       <ul>
+     <li> WP contains MStCs & MBiCs students </li>
+     <li> Maths contains MStCs, PCM & PMSt students </li>
+     <li> Statistics MStCs & PMSt Students </li>
+
+       </ul> 
+  
+  <label>Select The Branch: </label>
+       <select onclick="batch(this.value)">
+ <!-- WP contains data of MStCs & MBiCs students -->
+    <option selected>Web Programming </option>
+<!-- Maths contains data of MStCs, PCM & PMSt students -->
+     <option >Maths</option>
+     <!-- Statistics MStCs & PMSt Students  -->
+     <option >Statistics</option>
+     
+   </select>
+    <br><br>
+     <input type="file" accept=".csv" id="upload-csv">
+     <button type="submit" id="btn-upload-csv">Submit</button>
+  <table id="data" border="1">
+    <tr>
+      <th>Name</th>
+    </tr>
+   
+  </table>
+  
+   
+</body>
+</html>
