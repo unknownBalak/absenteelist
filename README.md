@@ -1,1 +1,1 @@
-# absenteelist
+My teachers are taking online classes so they take attandence manually and then they download list and crosscheck who are present and who are not. And it is literally so much annoying. So my program will help them to come out of this situation. 
