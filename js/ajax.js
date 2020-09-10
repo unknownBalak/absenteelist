@@ -1,9 +1,14 @@
- ( function(global){
-
-       var ajaxutils ={};
-     ajaxutils.comparedata =function(csvfile){
+   window.batch =function()
+   {
+       window.query= document.querySelector('#id').value;
+      // console.log(window.query);         
+    
+   }  
+  //  console.log(window.query);
+       var absenteelist=[];
+    //  ajaxut,ils.
+     comparedata =function(csvfile){
     //   console.log(csvfile.length);
-      //  document.getElementById('data').innerHTML ="<h4> Hey we are in ajax.js </h4>"
           
         var request=new XMLHttpRequest();
         request.onreadystatechange = 
@@ -33,32 +38,52 @@
             }
             if(!bool) 
         {
-          document.write(dbname,"<br>");              
-         
-          // var row = table.insertRow(-1);
-          // headerCell = document.createElement("td");
-          //     headerCell.innerHTML= dbname;
-          // row.appendChild(headerCell);
+          absenteelist.push(dbname);
+      }
+
         }
-        }
-    //    var table=document.getElementById('data');
-    //     table.appendChild(row);    
     }
    };
-   function batch(batch)
-   {
-      if(batch==='statistics'){
-        console.log('statistics')
-      }
+   if(window.query==="Ap"){
+     alert("Please Choose the class");
    }
-
-  request.open("GET","jsonfile/WP.json", true);
+  // console.log(window.query);
+   if(window.query==="Maths"){
+    console.log("We are in Maths")
+    request.open("GET","jsonfile/maths.json", true);
+   }
+  else if(window.query==="Stats"){
+    console.log("We are in stats")
+    request.open("GET","jsonfile/stats.json", true);
+  }
+  else if(window.query==="WP"){
+    console.log("We are in WP")
+    request.open("GET","jsonfile/WP.json", true);
+  }
   request.send(null)
 
+  
 
-
-
- }
+  // if(absenteelist.le
+   if(absenteelist.length!==0){
+    var table=document.getElementById('data');
+  console.log(absenteelist);
+  var ul=document.createElement("ul");
+  absenteelist.forEach(element => {
+          
+           var list=document.createElement('li');
+           list.innerHTML=element;
+             ul.appendChild(list);
+  
+  });
+  table.appendChild(ul);
+  document.getElementById("upload-csv").value="";
  
-    global.ajaxutils= ajaxutils;
-      })(window);
+}
+    
+
+window.absenteelist.splice(0,absenteelist.length);
+
+}
+
+//  });

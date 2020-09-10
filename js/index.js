@@ -2,7 +2,11 @@ document.addEventListener("DOMContentLoaded",function(event){
     let btn_upload =
         document.getElementById('btn-upload-csv').
             addEventListener('click', () => {
-    
+      if(!document.getElementById('upload-csv').files[0]){
+                      alert("Please Select File");
+      }
+      
+      else {
                 Papa.parse(document.getElementById('upload-csv').files[0], {
                     // download: false,
                     header: false,
@@ -12,7 +16,7 @@ document.addEventListener("DOMContentLoaded",function(event){
                         displayData(results.data);
                     }
                 });
-    
+            }
         //   console.log(data)
            
           function displayData(results) {
@@ -142,7 +146,7 @@ document.addEventListener("DOMContentLoaded",function(event){
             // console.log(csvfile);
     
             // window.location.assign('ajax.js')
-   ajaxutils.comparedata(csvfile);
+   comparedata(csvfile);
         } 
     
       
@@ -150,7 +154,7 @@ document.addEventListener("DOMContentLoaded",function(event){
    
    
    
-   
+
    
             });
 

@@ -13,33 +13,33 @@
 <body> 
   
   <span style="color:#0c2afd; font-weight: 900;">HINT: </span>
-       <ul>
+     <ul>
      <li> WP contains MStCs & MBiCs students </li>
      <li> Maths contains MStCs, PCM & PMSt students </li>
      <li> Statistics MStCs & PMSt Students </li>
-
-       </ul> 
+     </ul> 
   
-  <label>Select The Branch: </label>
-       <select onclick="batch(this.value)">
+  <label>Select The Class Name: </label>
+       <select onblur="batch()" required id="id">
  <!-- WP contains data of MStCs & MBiCs students -->
-    <option selected>Web Programming </option>
+    <option value="Ap" >None </option>
+    <option value="WP" >Web Programming </option>
 <!-- Maths contains data of MStCs, PCM & PMSt students -->
-     <option >Maths</option>
+     <option value="Maths" >Maths</option>
      <!-- Statistics MStCs & PMSt Students  -->
-     <option >Statistics</option>
+     <option  value="Stats">Statistics</option>
      
    </select>
     <br><br>
      <input type="file" accept=".csv" id="upload-csv">
-     <button type="submit" id="btn-upload-csv">Submit</button>
-  <table id="data" border="1">
-    <tr>
-      <th>Name</th>
-    </tr>
-   
+     <button type="submit"  id="btn-upload-csv">Submit</button>
+
+     <div id="data">
+
+     </div>
   </table>
-  
+  <script>
    
-</body>
+  </script>
 </html>
+</body>
