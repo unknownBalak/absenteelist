@@ -136,12 +136,12 @@ document.addEventListener("DOMContentLoaded",function(event){
                             }
                         }
                     }
-                    console.log(csvfile.length);
+                    // console.log(csvfile[0]);
              
                     // csvfile.forEach(elements =>
                     //     {
-                    //         // console.log(elements[0]);
-                    //     }  
+                    //         console.log(elements[0]);
+                    //     }  );
                         
             // console.log(csvfile);
     
