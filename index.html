@@ -5,13 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSV file</title>
     <script src="js/papaparse.min.js"></script>
-    <script src="js/ajax1.js"></script>
     <script src="js/index.js"></script>
     <script src="js/ajax.js"></script>
+    <script src="js/ajax1.js"></script>
+    
+    <!-- <style>
+       *{
+          margin:0;
+           padding:0;
+       }
+       .container{
+          min-height: 100vh;
+          padding:20px;
+          margin:10px;
+       }
+        /* footer{
+        
+       }  */
+       p{
+          text-align:center;
+          padding:10px;
 
+       }
+       strong{
+          color:black;
+       }
+       span{
+          color:#1c0fe2;
+          font-size:20px;
+       }
+    </style> -->
 </head>
 <body> 
-  
+  <div class="container">
+
   <span style="color:#0c2afd; font-weight: 900;">HINT: </span>
      <ul>
      <li> WP contains MStCs & MBiCs students </li>
@@ -20,7 +47,7 @@
      </ul> 
   
   <label>Select The Class Name: </label>
-       <select onblur="batch()" required id="id">
+       <select  required id="id">
  <!-- WP contains data of MStCs & MBiCs students -->
     <option value="Ap" >None </option>
     <option value="WP" >Web Programming </option>
@@ -34,12 +61,15 @@
      <input type="file" accept=".csv" id="upload-csv">
      <button type="submit"  id="btn-upload-csv">Submit</button>
 
-     <div id="data">
+     <div id="data" style="margin-top:10px;">
 
      </div>
-  </table>
-  <script>
+  </div>
+<script>
    
   </script>
 </html>
+<!-- <footer style="background-color: grey;color:white;">
+    <p>Proudly developed by <strong>Unknown Balak</strong> Under the guidance of <span style="font: weight 800;">Swati Pie</span></p>
+</footer> -->
 </body>

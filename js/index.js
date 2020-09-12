@@ -30,12 +30,12 @@ document.addEventListener("DOMContentLoaded",function(event){
                     });
                     // console.log(left_people)
     //  ************** Deleting the redundant data ******************
-                    console.log(left_people)
+                    // console.log(left_people)
                     // want to use function use below
             // left_people=left_people.filter(function (value,index,left_people){ return left_people.indexOf(value)==index });
             //    Don't want to use function use below 
             left_people=left_people.filter((value,index,left_people) =>  { return left_people.indexOf(value)==index });
-            console.log(left_people);
+            // console.log(left_people);
        
           
             // calling a function where you will check all data of left people
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded",function(event){
                             }
                         });
                     });
-                    console.log( dataOfLeftPeople);
+                    // console.log( dataOfLeftPeople);
     
                     leftJointime(left_people, dataOfLeftPeople, csvfile);
                   }
@@ -136,16 +136,7 @@ document.addEventListener("DOMContentLoaded",function(event){
                             }
                         }
                     }
-                    // console.log(csvfile[0]);
-             
-                    // csvfile.forEach(elements =>
-                    //     {
-                    //         console.log(elements[0]);
-                    //     }  );
-                        
-            // console.log(csvfile);
-    
-            // window.location.assign('ajax.js')
+                 
    comparedata(csvfile);
         } 
     
