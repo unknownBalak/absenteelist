@@ -1,0 +1,15 @@
+
+#data {
+    display: grid;
+    grid-template-columns: 300px 100px 300px 100px 300px 100px;
+ /* border:1px solid; */
+}
+#data div{
+    border:1px solid;
+}
+@media (max-width:992px){
+   #data{
+
+       grid-template-columns: auto auto;
+   }
+}
